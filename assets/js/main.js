@@ -138,8 +138,8 @@
     });
   });
 
-  // Testimonials carousel (uses the Owl Carousel library)
-  $(".testimonials-carousel").owlCarousel({
+  // teams carousel (uses the Owl Carousel library)
+  $(".teams-carousel").owlCarousel({
     autoplay: true,
     dots: true,
     loop: true,
