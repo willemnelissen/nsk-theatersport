@@ -611,6 +611,10 @@ section {
   font-size: 24px;
 }
 
+.sponsors .icon .euros {
+  color: #fff;
+}
+
 .sponsors .icon-box:hover .icon {
   background: #fff;
 }
@@ -618,6 +622,11 @@ section {
 .sponsors .icon-box:hover .icon i {
   color: #149ddd;
 }
+
+.sponsors .icon-box:hover .icon .euros {
+  color: #149ddd;
+}
+
 
 .sponsors .title {
   margin-left: 80px;
