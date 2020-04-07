@@ -587,13 +587,13 @@ section {
 }
 
 /*--------------------------------------------------------------
-# Services
+# Sponsors
 --------------------------------------------------------------*/
-.services .icon-box {
+.sponsors .icon-box {
   margin-bottom: 20px;
 }
 
-.services .icon {
+.sponsors .icon {
   float: left;
   display: flex;
   align-items: center;
@@ -606,35 +606,44 @@ section {
   border: 1px solid #149ddd;
 }
 
-.services .icon i {
+.sponsors .icon i {
   color: #fff;
   font-size: 24px;
 }
 
-.services .icon-box:hover .icon {
+.sponsors .icon .euros {
+  color: #fff;
+}
+
+.sponsors .icon-box:hover .icon {
   background: #fff;
 }
 
-.services .icon-box:hover .icon i {
+.sponsors .icon-box:hover .icon i {
   color: #149ddd;
 }
 
-.services .title {
+.sponsors .icon-box:hover .icon .euros {
+  color: #149ddd;
+}
+
+
+.sponsors .title {
   margin-left: 80px;
   font-weight: 700;
   margin-bottom: 15px;
   font-size: 18px;
 }
 
-.services .title a {
+.sponsors .title a {
   color: #343a40;
 }
 
-.services .title a:hover {
+.sponsors .title a:hover {
   color: #149ddd;
 }
 
-.services .description {
+.sponsors .description {
   margin-left: 80px;
   line-height: 24px;
   font-size: 14px;
