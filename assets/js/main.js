@@ -58,7 +58,7 @@
   dataType: "json",
   data: $form.serializeObject()
     }).success(
-  // do something
+  $('body').toggleClass('upside-down')
   );
 })
 
