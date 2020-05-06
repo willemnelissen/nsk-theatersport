@@ -425,7 +425,7 @@ section {
 }
 
 /*--------------------------------------------------------------
-# Akills
+# Skills
 --------------------------------------------------------------*/
 .skills .progress {
   height: 50px;
@@ -625,6 +625,14 @@ section {
 --------------------------------------------------------------*/
 .sponsors .icon-box {
   margin-bottom: 20px;
+}
+
+.sponsors .valueSpan {
+  color: #149ddd;
+}
+
+.sponsors #vriendenRange::-webkit-slider-thumb {
+  background: #149ddd;
 }
 
 .sponsors .icon {

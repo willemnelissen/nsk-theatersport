@@ -44,9 +44,9 @@
         <img src="assets/img/logo_belgie-256x256.png" alt="Logo van NSK 2020" class="img-thumbnail">
         <h1 class="text-light"><a href="index.html">NSK in België! &#128525;</a></h1>
         <div class="social-links mt-3 text-center">
-          <a href="https://www.instagram.com/nsktheatersport/" class="instagram"><i class="bx bxl-instagram"></i></a>
-          <a href="https://twitter.com/Preparee" class="twitter"><i class="bx bxl-twitter"></i></a>
-          <a href="https://www.facebook.com/preparee/" class="facebook"><i class="bx bxl-facebook"></i></a>
+          <a href="https://www.instagram.com/nsktheatersport/" class="instagram"><i class="bx bx-spin-hover bxl-instagram"></i></a>
+          <a href="https://twitter.com/Preparee" class="twitter"><i class="bx bx-spin-hover bxl-twitter"></i></a>
+          <a href="https://www.facebook.com/preparee/" class="facebook"><i class="bx bx-spin-hover bxl-facebook"></i></a>
         </div>
       </div>
 
@@ -331,13 +331,50 @@
 
         <div class="section-title">
           <h2>Vrienden van het NSK</h2>
-          <p>Sinds 2018 is het mogelijk om een echte vriend van het NSK te worden. Jij geeft ons een kleine geldelijke bijdrage, en wij stellen er heel wat leuke dingen tegenover!</p>
+          <p>Sinds 2018 is het mogelijk om een echte vriend van het NSK te worden. Door een kleine gift te doen help je het NSK te blijven bestaan. Ontdek onze tegenprestaties met het balkje hieronder!</p>
+        </div>
+
+        <div class="row">
+          <div class="col-lg-4" data-aos="fade-right">
+            <input type="range" class="custom-range" id="vriendenRange" min="0" max="100" value="5">
+          </div>  
+        </div>
+        <div class="row">
+          <div class="col-lg-8">
+            Je doet een gift van € <span class="font-weight-bold valueSpan"></span>, dus je krijgt van ons een dikke kus.
+            <span class="rewardsText1">En ook een medaille wanneer je op het toernooi aankomt!</span>
+            <span class="rewardsText2">En een toeter.</span>
+            <span class="rewardsText3">En een hoed!</span>
+            <span class="rewardsText4">En een paard!</span>
+          </div>
+        </div>
+        
+        <div class="row"><div class="col-lg-4"><br>
+          <form id="test-form">
+            <div>
+              <label>Bedrag</label>
+              <input type="number" name="bedrag" placeholder="100"/>
+            </div>
+            <div>
+              <label>E-mail</label>
+              <input type="email" name="email" placeholder="mail@mailer.mail"/>
+            </div>
+            <div>
+              <button type="submit" id="submit-form">Submit</button>
+            </div>
+          </form>
+          <!--
+          <div class="input-group mb-3">
+            <input class="form-control" type="email" value="" name="EMAIL" id="mailadres" placeholder="E-mailadres" required>
+            <div class="input-group-append">
+              <input type="submit" class="btn btn-primary" value="Verzenden" name="subscribe" id="mailchimp-subscribe">
+            </div>-->
         </div>
 
         <div class="row">
           <div class="col-lg-4 col-md-6 icon-box" data-aos="fade-up">
             <!--<div class="icon"><i class="icofont-computer"></i></div>-->
-            <div class="icon"><strong class="euros">€ 5</strong></div>
+            <!--<div class="icon"><strong class="euros">€ 5</strong></div>-->
             <h4 class="title"><a href="">Een vriend!</a></h4>
             <p class="description">Geef je €5 of meer, dan mag je je vanaf nu een vriend van het NSK noemen. Je krijgt op het toernooi zelf een echte medaille!</p>
           </div>

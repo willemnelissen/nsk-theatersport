@@ -6,6 +6,65 @@
 */
 !(function($) {
   "use strict";
+  
+  // CUSTOM JAVASCRIPT
+
+  // Alles op z'n kop
+  $(".upside-down-toggle").click(function() {
+    $('body').toggleClass('upside-down');
+    $(".upside-down-toggle").remove();
+  });
+
+  // Slider bij vrienden
+  $(document).ready(function() {
+    const $valueSpan = $('.valueSpan');
+    const $value = $('#vriendenRange');
+    $valueSpan.html($value.val());
+    $value.on('input', () => {
+  
+      $valueSpan.html($value.val());
+      if ($value.val() < 5) {
+        $(".rewardsText1").hide();
+        $(".rewardsText2").hide();
+        $(".rewardsText3").hide();
+        $(".rewardsText4").hide();
+      } 
+      if ($value.val() >= 5) {
+        $(".rewardsText1").show();
+      } 
+      if ($value.val() >= 15) {
+        $(".rewardsText2").show();
+      } 
+      if ($value.val() >= 25) {
+        $(".rewardsText3").show();
+      }
+      if ($value.val() >= 50) {
+        $(".rewardsText4").show();
+      }
+
+    });
+  });
+
+  // Formulier bij Vrienden
+  
+  var $form = $('form#test-form'),
+  url = 'https://script.google.com/macros/s/AKfycbwAbxEO_Jlkbum4LyrC-BVMu-Y2UlYPcaevnHmx-D0dcawVBtI/exec'
+
+  $('#submit-form').on('click', function(e) {
+  e.preventDefault();
+  var jqxhr = $.ajax({
+  url: url,
+  method: "GET",
+  dataType: "json",
+  data: $form.serializeObject()
+    }).success(
+  // do something
+  );
+})
+
+
+  // END OF CUSTOM JAVASCRIPT  
+
 
   // Hero typed
   if ($('.typed').length) {
@@ -19,13 +78,6 @@
       backDelay: 2000
     });
   }
-
-  // Alles op z'n kop
-  
-  $(".upside-down-toggle").click(function() {
-    $('body').toggleClass('upside-down');
-    $(".upside-down-toggle").remove();
-  });
 
   // Smooth scroll for the navigation menu and links with .scrollto classes
   $(document).on('click', '.nav-menu a, .scrollto', function(e) {
