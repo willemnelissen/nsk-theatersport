@@ -623,6 +623,22 @@ section {
 /*--------------------------------------------------------------
 # Sponsors
 --------------------------------------------------------------*/
+
+.sponsors input[type="submit"] {
+  background: #149ddd;
+  border: 0;
+/*  padding: 10px 24px;*/
+  color: #fff;
+  transition: 0.4s;
+  border-top-right-radius: 4px;
+  border-bottom-right-radius: 4px;
+/*  border-radius: 4px;*/
+}
+
+.sponsors input[type="submit"]:hover {
+  background: #173b6c;
+}
+
 .sponsors .icon-box {
   margin-bottom: 20px;
 }

@@ -47,7 +47,7 @@
 
   // Formulier bij Vrienden
   
-  var $form = $('form#test-form'),
+  var $form = $('form#vrienden-form'),
   url = 'https://script.google.com/macros/s/AKfycbwAbxEO_Jlkbum4LyrC-BVMu-Y2UlYPcaevnHmx-D0dcawVBtI/exec'
 
   $('#submit-form').on('click', function(e) {
