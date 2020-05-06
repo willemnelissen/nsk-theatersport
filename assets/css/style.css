@@ -639,6 +639,10 @@ section {
   background: #173b6c;
 }
 
+.sponsors .custom-range {
+  touch-action: none;
+}
+
 .sponsors .icon-box {
   margin-bottom: 20px;
 }
