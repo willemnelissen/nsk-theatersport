@@ -16,10 +16,37 @@
   });
 
   // Slider bij vrienden
-
-  $('#vriendenRange').change( function() { 
-    alert('Handler for change vriendenrange called');
+  $(document).ready(function() {
+    const $rewardBox = $('#vriendenRewards')
+    $('#vriendenRange').on('input', function() {
+      const $bedrag =  $('#vriendenRange').val()
+      $('#vriendenValue').html("€ "+ $bedrag)
+      const $saturation = Math.round($bedrag/75*100)
+      const $hslString = "hsl(54,"+$saturation+"%,50%)"
+      $rewardBox.html("background-color"+$hslString)
+      
+      if ($bedrag < 5) {
+        $rewardBox.addClass("vriend-level-0")
+        $rewardBox.removeClass("vriend-level-1")
+      } else if ($bedrag >= 5 && $bedrag < 15) {
+        $rewardBox.removeClass(["vriend-level-0","vriend-level-1"])
+        $rewardBox.addClass("vriend-level-1")
+      } else if ($bedrag >= 15 && $bedrag < 25) {
+        $rewardBox.removeClass(["vriend-level-1","vriend-level-3"])
+        $rewardBox.addClass("vriend-level-2")
+      } else if ($bedrag >= 25 && $bedrag < 35) {
+        $rewardBox.removeClass(["vriend-level-2","vriend-level-4"])
+        $rewardBox.addClass("vriend-level-3")
+      } else if ($bedrag >= 35 && $bedrag < 50) {
+        $rewardBox.removeClass(["vriend-level-3","vriend-level-5"])
+        $rewardBox.addClass("vriend-level-4")
+      } else if ($bedrag >= 50) {
+        $rewardBox.removeClass("vriend-level-4")
+        $rewardBox.addClass("vriend-level-5")
+      }
+    });
   });
+
   /*
   $(document).ready(function() {
     const $valueSpan = $('.valueSpan');

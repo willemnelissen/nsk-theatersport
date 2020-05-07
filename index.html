@@ -331,20 +331,27 @@
 
         <div class="section-title">
           <h2>Vrienden van het NSK</h2>
-          <p>Sinds 2018 is het mogelijk om een echte vriend van het NSK te worden. Door een kleine gift te doen help je het NSK te blijven bestaan. Ontdek onze tegenprestaties met het balkje hieronder!</p>
+          <p>Sinds 2018 is het mogelijk om een echte vriend van het NSK te worden. Door een kleine gift te doen help je het NSK te blijven bestaan. Ontdek onze tegenprestaties met de slider hieronder!</p>
         </div>
 
+        <div class="row" data-aos="fade-right">
+          <div class="col-lg-4 col-md-8 col-sm-8 col-xs-8">
+            <input type="range" class="custom-range" id="vriendenRange" min="1" max="75" value="12" form="vrienden-form" name="bedrag" required>
+          </div>
+          <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+            Je geeft <span class="font-weight-bold" id="vriendenValue">€ 12</span>!
+          </div>
+        </div>
         <div class="row">
-          <div class="col-lg-4" data-aos="fade-right">
-            <input type="range" class="custom-range" id="vriendenRange" min="1" max="100" value="12" form="vrienden-form" name="bedrag" required>
-          </div>  
+          <div class="col-lg-6 vriend-level-1" id="vriendenRewards">
+            LALALA
+          </div>
         </div>
-
         <div class="row">
           <div class="col-lg-8">
-            Je doet een gift van € <span class="font-weight-bold valueSpan"></span>, dus je krijgt van ons een dikke kus.
+            Je doet een gift van € , dus je krijgt van ons een dikke kus.
             <span class="rewardsText1">En ook een medaille wanneer je op het toernooi aankomt!</span>
-            <span class="rewardsText2" data-aos="fade up">En een toeter.</span>
+            <span class="rewardsText2">En een toeter.</span>
             <span class="rewardsText3">En een hoed!</span>
             <span class="rewardsText4">En een paard!</span>
             <br>
@@ -354,18 +361,18 @@
         </div>
         
         <div class="row">
-          <div class="col-lg-8">
-          <form id="vrienden-form">
-            <div class="input-group">
-              <input class="form-control" type="email" name="email" placeholder="E-mailadres" required/>
-              <div class="input-group-append">
+          <div class="col-sm-8">
+            <form id="vrienden-form">
+              <div class="input-group">
+                <input class="form-control" type="email" name="email" placeholder="E-mailadres" required/>
+                  <div class="input-group-append">
                 <input type="submit" id="submit-form" class="btn btn-primary btn-submit" value="Ik wil vriend worden!">
               </div>
             </div>
           </form>
         </div>
         
-        <div class="row">
+        <div class="row" hidden>
           <div class="col-lg-4 col-md-6 icon-box" data-aos="fade-up">
             <!--<div class="icon"><i class="icofont-computer"></i></div>-->
             <!--<div class="icon"><strong class="euros">€ 5</strong></div>-->
@@ -403,7 +410,7 @@
             <p class="description">We zijn sprakeloos. Jij bent de allerbeste. Onze alpha en omega. Je krijgt twee tickets voor de finale cadeau, en daarbovenop alle andere beloningen.</p>
           </div>
         </div>      
-      </div>-->
+      </div>
     </section><!-- End Sponsors Section -->
 
     <!-- ======= Teams Section ======= -->

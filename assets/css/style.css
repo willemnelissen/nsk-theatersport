@@ -643,11 +643,12 @@ section {
   touch-action: none; 
 }
 
+
 .sponsors .icon-box {
   margin-bottom: 20px;
 }
 
-.sponsors .valueSpan {
+.sponsors #vriendenValue {
   color: #149ddd;
 }
 
@@ -667,6 +668,40 @@ section {
   transition: 0.5s;
   border: 1px solid #149ddd;
 }
+
+.sponsors #vriendenRewards {
+  margin: 20px;
+  border-style: solid;
+  transition: all 0.1s;
+/*  border-color: #18d26e;
+  border-width: 5px;*/
+}
+
+.sponsors .vriend-level-0 {
+  background: hsl(55,44%,95%);
+  border-width: 2px;
+}
+.sponsors .vriend-level-1 {
+  background: hsl(95,50%,75%);
+  border-width: 4px;
+}
+.sponsors .vriend-level-2 {
+  background: hsl(77,64%,63%);
+  border-width: 6px;
+}
+.sponsors .vriend-level-3 {
+  background: hsl(73,68%,58%);
+  border-width: 50px;
+}
+.sponsors .vriend-level-4 {
+  background: hsl(70,71%,52%);
+  border-width: 10px;
+}
+.sponsors .vriend-level-5 {
+  background: hsl(56,100%,52%);
+  border-width: 12px;
+}
+
 
 .sponsors .icon i {
   color: #fff;
