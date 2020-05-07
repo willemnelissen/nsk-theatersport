@@ -648,11 +648,11 @@ section {
   margin-bottom: 20px;
 }
 
-.sponsors #vriendenValue {
+.sponsors #vrienden-value {
   color: #149ddd;
 }
 
-.sponsors #vriendenRange::-webkit-slider-thumb {
+.sponsors #vrienden-range::-webkit-slider-thumb {
   background: #149ddd;
 }
 
@@ -669,20 +669,21 @@ section {
   border: 1px solid #149ddd;
 }
 
-.sponsors #vriendenRewards {
-  margin: 20px;
+.sponsors #vrienden-rewards {
+  margin: 15px; 
+  padding: 10px;
+  border-radius: 3px;
   border-style: solid;
-  transition: all 0.1s;
-/*  border-color: #18d26e;
-  border-width: 5px;*/
+  transition: all 0.5s;
+  box-shadow: 0px 0px 8px #999;
 }
 
 .sponsors .vriend-level-0 {
-  background: hsl(55,44%,95%);
+  background: rgb(223, 218, 204);
   border-width: 2px;
 }
 .sponsors .vriend-level-1 {
-  background: hsl(95,50%,75%);
+  background: rgb(156, 233, 100);
   border-width: 4px;
 }
 .sponsors .vriend-level-2 {
@@ -691,7 +692,7 @@ section {
 }
 .sponsors .vriend-level-3 {
   background: hsl(73,68%,58%);
-  border-width: 50px;
+  border-width: 8px;
 }
 .sponsors .vriend-level-4 {
   background: hsl(70,71%,52%);

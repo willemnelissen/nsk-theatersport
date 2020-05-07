@@ -17,31 +17,40 @@
 
   // Slider bij vrienden
   $(document).ready(function() {
-    const $rewardBox = $('#vriendenRewards')
-    $('#vriendenRange').on('input', function() {
-      const $bedrag =  $('#vriendenRange').val()
-      $('#vriendenValue').html("€ "+ $bedrag)
-      const $saturation = Math.round($bedrag/75*100)
-      const $hslString = "hsl(54,"+$saturation+"%,50%)"
-      $rewardBox.html("background-color"+$hslString)
+    const $rewardBox = $('#vrienden-rewards')
+    $('#vrienden-range').on('input change', function() {
+      const $bedrag =  $('#vrienden-range').val()
+      const $vriendenLevels = ["vriend-level-0","vriend-level-1","vriend-level-2","vriend-level-3","vriend-level-4","vriend-level-5",]
+      $('#vrienden-value').html("€ "+ $bedrag + "!")
       
       if ($bedrag < 5) {
+        $('#reward-info').html("level 0")
+        $rewardBox.removeClass($vriendenLevels)
         $rewardBox.addClass("vriend-level-0")
-        $rewardBox.removeClass("vriend-level-1")
+
       } else if ($bedrag >= 5 && $bedrag < 15) {
-        $rewardBox.removeClass(["vriend-level-0","vriend-level-1"])
+        $('#reward-info').html("level 1")
+        $rewardBox.removeClass($vriendenLevels)
         $rewardBox.addClass("vriend-level-1")
+
       } else if ($bedrag >= 15 && $bedrag < 25) {
-        $rewardBox.removeClass(["vriend-level-1","vriend-level-3"])
+        $('#reward-info').html("level 2")
+        $rewardBox.removeClass($vriendenLevels)
         $rewardBox.addClass("vriend-level-2")
+
       } else if ($bedrag >= 25 && $bedrag < 35) {
-        $rewardBox.removeClass(["vriend-level-2","vriend-level-4"])
+        $('#reward-info').html("level 3")
+        $rewardBox.removeClass($vriendenLevels)
         $rewardBox.addClass("vriend-level-3")
+
       } else if ($bedrag >= 35 && $bedrag < 50) {
-        $rewardBox.removeClass(["vriend-level-3","vriend-level-5"])
+        $('#reward-info').html("level 4")
+        $rewardBox.removeClass($vriendenLevels)
         $rewardBox.addClass("vriend-level-4")
+        
       } else if ($bedrag >= 50) {
-        $rewardBox.removeClass("vriend-level-4")
+        $('#reward-info').html("level 5")
+        $rewardBox.removeClass($vriendenLevels)
         $rewardBox.addClass("vriend-level-5")
       }
     });
@@ -50,7 +59,7 @@
   /*
   $(document).ready(function() {
     const $valueSpan = $('.valueSpan');
-    const $value = $('#vriendenRange');
+    const $value = $('#vrienden-range');
     $valueSpan.html($value.val());
     $value.on('input', () => {
   
