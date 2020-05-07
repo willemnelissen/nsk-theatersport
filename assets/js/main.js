@@ -16,6 +16,11 @@
   });
 
   // Slider bij vrienden
+
+  $('#vriendenRange').change( function() { 
+    alert('Handler for change vriendenrange called');
+  });
+  /*
   $(document).ready(function() {
     const $valueSpan = $('.valueSpan');
     const $value = $('#vriendenRange');
@@ -31,20 +36,32 @@
       } 
       if ($value.val() >= 5) {
         $(".rewardsText1").show();
+        $(".rewardsText2").hide();
+        $(".rewardsText3").hide();
+        $(".rewardsText4").hide();
       } 
       if ($value.val() >= 15) {
+        $(".rewardsText1").show();
         $(".rewardsText2").show();
+        $(".rewardsText3").hide();
+        $(".rewardsText4").hide();
       } 
       if ($value.val() >= 25) {
+        $(".rewardsText1").show();
+        $(".rewardsText2").show();
         $(".rewardsText3").show();
+        $(".rewardsText4").hide();
       }
-      if ($value.val() >= 50) {
+      if ($value.val() >= 35) {
+        $(".rewardsText1").show();
+        $(".rewardsText2").show();
+        $(".rewardsText3").show();
         $(".rewardsText4").show();
       }
 
     });
   });
-
+*/
   // Formulier bij Vrienden
   
   var $form = $('form#vrienden-form'),

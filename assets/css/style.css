@@ -640,7 +640,7 @@ section {
 }
 
 .sponsors .custom-range {
-  touch-action: none;
+  touch-action: none; 
 }
 
 .sponsors .icon-box {
