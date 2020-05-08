@@ -54,7 +54,8 @@
       animation.onfinish = () => {$('particle').remove();};
     }, 5);
   }
-  confetti(150,150)
+  $(document).ready(confetti(150,150))
+  
 
   // Slider bij vrienden
   $(document).ready(function() {
