@@ -20,7 +20,8 @@
     window.setInterval(function(){
       // Create particle element and put in body
       const particle = document.createElement('particle')
-      document.body.appendChild(particle)
+      //document.body.appendChild(particle)
+      $("#vrienden-rewards").append(particle)
       // Apply random width from 2 to 7 px, height is 2 times width
       const width = Math.floor(Math.random()*5+2)
       particle.style.width = `${size}px`;
