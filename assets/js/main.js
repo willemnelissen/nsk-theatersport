@@ -55,7 +55,8 @@
     }, 5);
   }
   $(document).ready(function() {
-    confetti(150,150)})
+    confetti(150,150)
+  })
   
 
   // Slider bij vrienden
@@ -95,7 +96,7 @@
         $rewardBox.addClass("vriend-level-5")
         var horizontalCenter = Math.floor(window.innerWidth/2);
         var verticalCenter = Math.floor(window.innerHeight/2);
-//        confetti(horizontalCenter,verticalCenter)
+        confetti(horizontalCenter,verticalCenter)
       }
     });
   });
