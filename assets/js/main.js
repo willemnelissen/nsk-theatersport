@@ -4,6 +4,7 @@
 * Author: BootstrapMade.com
 * License: https://bootstrapmade.com/license/
 */
+
 !(function($) {
   "use strict";
   
@@ -16,14 +17,25 @@
   });
 
   // Confetti!
-  const confetti = function(x,y) {
-    window.setInterval(function(){
+  var allConfetties = [];
+  function destroyConfetty(allConfetties) {
+    allConfetties.forEach( (id)=>window.clearInterval(id))
+  }
+  function createConfetti(x,y,interval,confetti=0){
+    if (confetti!=0) {window.clearInterval(confetti)}
+    let id = window.setInterval(
+      function(){shootParticle(x,y)},
+      interval)
+    allConfetties.push(id)
+    return id
+  }
+
+  function shootParticle(x,y) {
       // Create particle element and put in body
-      const particle = document.createElement(particle)
+      const particle = document.createElement('particle')
       document.body.appendChild(particle)
-      $("#sponsors").append(particle)
       // Apply random width from 2 to 7 px, height is 2 times width
-      const width = Math.floor(Math.random()*5+2)
+      const size = Math.floor(Math.random()*5+2)
       particle.style.width = `${size}px`;
       particle.style.height = `${size*2}px`;
       // Get random color
@@ -33,8 +45,9 @@
       const destinationY = y - (Math.random()*(0.2)+0.3) * 200;
       // Rotate correspondingly
       const rotation = (destinationX-x);
+
       // Make the animation
-        // (CSS) particles spawn at 0, 0 with zero opacity
+        // (see CSS) particles spawn at 0, 0 with zero opacity
       const animation = particle.animate(
         [{ // first keyframe: move particle to x and y and give it opacity
           transform: `translate(${x - (size / 2)}px, ${y - (size / 2)}px) rotate(0deg)`,
@@ -51,11 +64,13 @@
       );
       // After animation, the particles are invisible, but still there
       // This removes them
-      animation.onfinish = () => {particle.remove();};
-    }, 5);
+      animation.onfinish = () => {
+        particle.remove();
+      };
   }
 
-
+  var thisConfetti = 0;
+  var secondConfetti = 0;
   // Slider bij vrienden
   $(document).ready(function() {
     const $rewardBox = $('#vrienden-rewards')
@@ -63,6 +78,13 @@
       const bedrag =  $('#vrienden-range').val()
       const vriendenLevels = ["vriend-level-0","vriend-level-1","vriend-level-2","vriend-level-3","vriend-level-4","vriend-level-5",]
       $('#vrienden-value').html("€ "+ bedrag + "!")
+      let offset = $('#vrienden-range').offset();
+      let left = Math.floor(offset.left)
+      let top = Math.floor(offset.top)
+
+      thisConfetti = createConfetti(left,top,Math.floor(1490-(19.8*bedrag)),thisConfetti)
+      secondConfetti = createConfetti(left+300,top,Math.floor(1490-(19.8*bedrag)),secondConfetti)
+
       if (bedrag < 5) {
         $('#reward-info').html("level 0")
         $rewardBox.removeClass(vriendenLevels)
@@ -86,14 +108,11 @@
         $('#reward-info').html("level 4")
         $rewardBox.removeClass(vriendenLevels)
         $rewardBox.addClass("vriend-level-4")
-        
+        confetti(150,150,5,stop=true)
       } else if (bedrag >= 50) {
         $('#reward-info').html("level 5")
         $rewardBox.removeClass(vriendenLevels)
         $rewardBox.addClass("vriend-level-5")
-        var horizontalCenter = Math.floor(window.innerWidth/2);
-        var verticalCenter = Math.floor(window.innerHeight/2);
-//        confetti(horizontalCenter,verticalCenter)
       }
     });
   });
