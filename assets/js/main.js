@@ -21,7 +21,6 @@
       // Create particle element and put in body
       const particle = document.createElement(particle)
       document.body.appendChild(particle)
-      $("#sponsors").append(particle)
       // Apply random width from 2 to 7 px, height is 2 times width
       const width = Math.floor(Math.random()*5+2)
       particle.style.width = `${size}px`;
@@ -51,13 +50,9 @@
       );
       // After animation, the particles are invisible, but still there
       // This removes them
-   //   animation.onfinish = () => {$('particle').remove();};
+      animation.onfinish = () => {'particle'.remove();};
     }, 5);
   }
-  $(document).ready(function() {
-    confetti(150,150)
-  })
-  
 
   // Slider bij vrienden
   $(document).ready(function() {
