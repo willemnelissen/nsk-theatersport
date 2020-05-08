@@ -19,9 +19,9 @@
   const confetti = function(x,y) {
     window.setInterval(function(){
       // Create particle element and put in body
-      const particle = document.createElement('particle')
-      //document.body.appendChild(particle)
-      $("#vrienden-rewards").append(particle)
+      const particle = document.createElement(particle)
+      document.body.appendChild(particle)
+      $("#sponsors").append(particle)
       // Apply random width from 2 to 7 px, height is 2 times width
       const width = Math.floor(Math.random()*5+2)
       particle.style.width = `${size}px`;
@@ -54,7 +54,8 @@
       animation.onfinish = () => {particle.remove();};
     }, 5);
   }
-
+  confetti(150,150)
+  
   // Slider bij vrienden
   $(document).ready(function() {
     const $rewardBox = $('#vrienden-rewards')
@@ -92,7 +93,7 @@
         $rewardBox.addClass("vriend-level-5")
         var horizontalCenter = Math.floor(window.innerWidth/2);
         var verticalCenter = Math.floor(window.innerHeight/2);
-        confetti(horizontalCenter,verticalCenter)
+//        confetti(horizontalCenter,verticalCenter)
       }
     });
   });
