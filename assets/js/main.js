@@ -51,7 +51,7 @@
       );
       // After animation, the particles are invisible, but still there
       // This removes them
-      animation.onfinish = () => {$('particle').remove();};
+   //   animation.onfinish = () => {$('particle').remove();};
     }, 5);
   }
   $(document).ready(function() {
