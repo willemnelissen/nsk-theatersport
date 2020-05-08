@@ -15,43 +15,83 @@
     $(".upside-down-toggle").remove();
   });
 
+  // Confetti!
+  const confetti = function(x,y) {
+    window.setInterval(function(){
+      // Create particle element and put in body
+      const particle = document.createElement('particle')
+      document.body.appendChild(particle)
+      // Apply random width from 2 to 7 px, height is 2 times width
+      const width = Math.floor(Math.random()*5+2)
+      particle.style.width = `${size}px`;
+      particle.style.height = `${size*2}px`;
+      // Get random color
+      particle.style.background = `hsl(${Math.random() * 360 }, 80%,50%)`;
+      // Generate a destination for the particle in a spread above the given x and y coordinates
+      const destinationX = x + (Math.random()-0.5) * 2 * 75;
+      const destinationY = y - (Math.random()*(0.2)+0.3) * 200;
+      // Rotate correspondingly
+      const rotation = (destinationX-x);
+      // Make the animation
+        // (CSS) particles spawn at 0, 0 with zero opacity
+      const animation = particle.animate(
+        [{ // first keyframe: move particle to x and y and give it opacity
+          transform: `translate(${x - (size / 2)}px, ${y - (size / 2)}px) rotate(0deg)`,
+          opacity: 1 },
+        { // second keyframe: this is the destination
+          transform: `translate(${destinationX}px, ${destinationY}px) rotate(${rotation}deg)`,
+          opacity: 0 }],
+        // More animation parameters
+        { // Set a random duration from 500 to 1500 ms
+        duration: 500 + Math.random() * 1000,
+        easing: 'cubic-bezier(0, .9, .57, 1)',
+        // Delay every particle with a random value from 0ms to 200ms
+        delay: Math.random() * 200}
+      );
+      // After animation, the particles are invisible, but still there
+      // This removes them
+      animation.onfinish = () => {particle.remove();};
+    }, 5);
+  }
+  confetti(150,150)
   // Slider bij vrienden
   $(document).ready(function() {
     const $rewardBox = $('#vrienden-rewards')
     $('#vrienden-range').on('input change', function() {
-      const $bedrag =  $('#vrienden-range').val()
-      const $vriendenLevels = ["vriend-level-0","vriend-level-1","vriend-level-2","vriend-level-3","vriend-level-4","vriend-level-5",]
-      $('#vrienden-value').html("€ "+ $bedrag + "!")
-      
-      if ($bedrag < 5) {
+      const bedrag =  $('#vrienden-range').val()
+      const vriendenLevels = ["vriend-level-0","vriend-level-1","vriend-level-2","vriend-level-3","vriend-level-4","vriend-level-5",]
+      $('#vrienden-value').html("€ "+ bedrag + "!")
+      if (bedrag < 5) {
         $('#reward-info').html("level 0")
-        $rewardBox.removeClass($vriendenLevels)
+        $rewardBox.removeClass(vriendenLevels)
         $rewardBox.addClass("vriend-level-0")
-
-      } else if ($bedrag >= 5 && $bedrag < 15) {
+      } else if (bedrag >= 5 && bedrag < 15) {
         $('#reward-info').html("level 1")
-        $rewardBox.removeClass($vriendenLevels)
+        $rewardBox.removeClass(vriendenLevels)
         $rewardBox.addClass("vriend-level-1")
 
-      } else if ($bedrag >= 15 && $bedrag < 25) {
+      } else if (bedrag >= 15 && bedrag < 25) {
         $('#reward-info').html("level 2")
-        $rewardBox.removeClass($vriendenLevels)
+        $rewardBox.removeClass(vriendenLevels)
         $rewardBox.addClass("vriend-level-2")
 
-      } else if ($bedrag >= 25 && $bedrag < 35) {
+      } else if (bedrag >= 25 && bedrag < 35) {
         $('#reward-info').html("level 3")
-        $rewardBox.removeClass($vriendenLevels)
+        $rewardBox.removeClass(vriendenLevels)
         $rewardBox.addClass("vriend-level-3")
 
-      } else if ($bedrag >= 35 && $bedrag < 50) {
+      } else if (bedrag >= 35 && bedrag < 50) {
         $('#reward-info').html("level 4")
-        $rewardBox.removeClass($vriendenLevels)
+        $rewardBox.removeClass(vriendenLevels)
         $rewardBox.addClass("vriend-level-4")
         
-      } else if ($bedrag >= 50) {
+      } else if (bedrag >= 50) {
         $('#reward-info').html("level 5")
-        $rewardBox.removeClass($vriendenLevels)
+        $rewardBox.removeClass(vriendenLevels)
         $rewardBox.addClass("vriend-level-5")
+        var horizontalCenter = Math.floor(window.innerWidth/2);
+        var verticalCenter = Math.floor(window.innerHeight/2);
+      //  confetti(horizontalCenter,verticalCenter)
       }
     });
   });
