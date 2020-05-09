@@ -69,50 +69,73 @@
       };
   }
 
-  var thisConfetti = 0;
-  var secondConfetti = 0;
+  
   // Slider bij vrienden
+  var firstConfetti = 0;
+  var secondConfetti = 0;
   $(document).ready(function() {
     const $rewardBox = $('#vrienden-rewards')
+    const vriendenLevels = ["vriend-level-0","vriend-level-1","vriend-level-2","vriend-level-3","vriend-level-4","vriend-level-5",]
+
     $('#vrienden-range').on('input change', function() {
+      const $rewardTitle = $("#sponsors").find("h4")
       const bedrag =  $('#vrienden-range').val()
-      const vriendenLevels = ["vriend-level-0","vriend-level-1","vriend-level-2","vriend-level-3","vriend-level-4","vriend-level-5",]
       $('#vrienden-value').html("€ "+ bedrag + "!")
       let offset = $('#vrienden-range').offset();
+      let vriendenWidth = $('#vrienden-range').outerWidth();
       let left = Math.floor(offset.left)
       let top = Math.floor(offset.top)
-
-      thisConfetti = createConfetti(left,top,Math.floor(1490-(19.8*bedrag)),thisConfetti)
-      secondConfetti = createConfetti(left+300,top,Math.floor(1490-(19.8*bedrag)),secondConfetti)
+      let right = Math.floor(offset.left + vriendenWidth)
+      $rewardBox.removeClass(vriendenLevels)
+      $('#actual-icon').removeClass()
 
       if (bedrag < 5) {
-        $('#reward-info').html("level 0")
-        $rewardBox.removeClass(vriendenLevels)
         $rewardBox.addClass("vriend-level-0")
+        $('#actual-icon').addClass('icofont-battery-empty')
+        $rewardTitle.html("Een kennis")
+        firstConfetti = createConfetti(left,top,400,firstConfetti)
+        secondConfetti = createConfetti(right,top,400,secondConfetti)
+        $(".description").html("Je krijgt van ons een grote dankjewel en een dikke kus!")
+
       } else if (bedrag >= 5 && bedrag < 15) {
-        $('#reward-info').html("level 1")
-        $rewardBox.removeClass(vriendenLevels)
         $rewardBox.addClass("vriend-level-1")
+        $('#actual-icon').addClass('icofont-medal')
+        $rewardTitle.html("Vriend!")
+        firstConfetti = createConfetti(left,top,100,firstConfetti)
+        secondConfetti = createConfetti(right,top,100,secondConfetti)  
+        $(".description").html("Bedankt dat je wil steunen. Bij aankomst op het toernooi krijg je een medaille!")
 
       } else if (bedrag >= 15 && bedrag < 25) {
-        $('#reward-info').html("level 2")
-        $rewardBox.removeClass(vriendenLevels)
         $rewardBox.addClass("vriend-level-2")
+        $('#actual-icon').addClass('icofont-skull-danger')
+        $rewardTitle.html("Gif-vriend #BFF")
+        firstConfetti = createConfetti(left,top,50,firstConfetti)
+        secondConfetti = createConfetti(right,top,50,secondConfetti)  
+        $(".description").html("Wow! Wat een topvriend! We maken speciaal voor jou een gepersonaliseerde bedank-gif!")
 
       } else if (bedrag >= 25 && bedrag < 35) {
-        $('#reward-info').html("level 3")
-        $rewardBox.removeClass(vriendenLevels)
         $rewardBox.addClass("vriend-level-3")
+        $('#actual-icon').addClass('icofont-beer')
+        $rewardTitle.html("Drinkmaatje!")
+        firstConfetti = createConfetti(left,top,30,firstConfetti)
+        secondConfetti = createConfetti(right,top,30,secondConfetti)  
+        $(".description").html("Holapola! Jij bent zo'n goede vriend, dat we met jou wel eens iets willen gaan drinken! En wij trakteren! Je krijgt van ons een heus bierenpakket bij aankomst op het toernooi!")
 
       } else if (bedrag >= 35 && bedrag < 50) {
-        $('#reward-info').html("level 4")
-        $rewardBox.removeClass(vriendenLevels)
         $rewardBox.addClass("vriend-level-4")
-        confetti(150,150,5,stop=true)
+        $('#actual-icon').addClass('icofont-jacket')
+        $rewardTitle.html("Matching outfits! #merch")
+        firstConfetti = createConfetti(left,top,10,firstConfetti)
+        secondConfetti = createConfetti(right,top,10,secondConfetti)  
+        $(".description").html("Op mensen als jou steunt het NSK. en we vinden dat iedereen dat mag weten. Van ons krijg je een echte <strong>single edition NSK 2020 t-shirt</strong>!")
+
       } else if (bedrag >= 50) {
-        $('#reward-info').html("level 5")
-        $rewardBox.removeClass(vriendenLevels)
         $rewardBox.addClass("vriend-level-5")
+        $('#actual-icon').addClass('icofont-heart')
+        $rewardTitle.html("Halve trouwboek")
+        firstConfetti = createConfetti(left,top,1,firstConfetti)
+        secondConfetti = createConfetti(right,top,1,secondConfetti)
+        $(".description").html("Jij bent de allerbeste. Je krijgt een finalekaartje én je zit bij de finale vooraan op een versierde stoel! Je mag ook nog kiezen tussen een t-shirt of een bierpakket én we bedanken je persoonlijk met een gif!")
       }
     });
   });

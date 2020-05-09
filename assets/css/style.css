@@ -643,17 +643,16 @@ section {
   touch-action: none; 
 }
 
-
-.sponsors .icon-box {
-  margin-bottom: 20px;
-}
-
 .sponsors #vrienden-value {
   color: #149ddd;
 }
 
 .sponsors #vrienden-range::-webkit-slider-thumb {
   background: #149ddd;
+}
+
+.sponsors #reward-info h4 {
+  color: #343a40;
 }
 
 .sponsors .icon {
@@ -668,6 +667,12 @@ section {
   transition: 0.5s;
   border: 1px solid #149ddd;
 }
+/*
+.sponsors .red-icon {
+  background: rgb(189, 9, 9);
+  border: none;
+}
+*/
 
 .sponsors #vrienden-rewards {
   margin: 15px; 
@@ -680,27 +685,52 @@ section {
 
 .sponsors .vriend-level-0 {
   background: rgb(223, 218, 204);
+  border-color: rgb(223, 218, 204);
   border-width: 2px;
 }
 .sponsors .vriend-level-1 {
-  background: rgb(156, 233, 100);
+  background: #b4f0e3;
+  border-color: #b4f0e3;
   border-width: 4px;
 }
 .sponsors .vriend-level-2 {
-  background: hsl(77,64%,63%);
+  background: rgb(189, 221, 75);
+  border-color: rgb(189, 221, 75);
   border-width: 6px;
 }
 .sponsors .vriend-level-3 {
-  background: hsl(73,68%,58%);
+  background:#f6c101;
   border-width: 8px;
+  border-image: repeating-linear-gradient(to right, black 0%,black 33%, #FDDA24 33%, #FDDA24 66%, #EF3340 66%, #EF3340 100%) 8;
+ /* border-image: linear-gradient(to right, grey 25%, yellow 25%, yellow 50%,red 50%, red 75%, teal 75%) 5;*/
 }
 .sponsors .vriend-level-4 {
-  background: hsl(70,71%,52%);
+  background: rgb(255, 202, 104);
+  border-color: rgb(255, 202, 104);
   border-width: 10px;
 }
 .sponsors .vriend-level-5 {
-  background: hsl(56,100%,52%);
+  background: hsl(0, 100%, 76%);
   border-width: 12px;
+  border-color: rgb(255, 133, 133);
+  animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+	0% {
+		transform: scale(1);
+		box-shadow: 0 0 0 0 rgba(255, 133, 133, 0.7);
+	}
+	
+	70% {
+		transform: scale(1);
+		box-shadow: 0 0 0 10px rgba(255, 133, 133, 0);
+	}
+	
+	100% {
+		transform: scale(1);
+		box-shadow: 0 0 0 0 rgba(255, 133, 133, 0);
+	}
 }
 
 particle {
@@ -716,43 +746,23 @@ particle {
   font-size: 24px;
 }
 
-.sponsors .icon .euros {
-  color: #fff;
-}
-
-.sponsors .icon-box:hover .icon {
-  background: #fff;
-}
-
-.sponsors .icon-box:hover .icon i {
-  color: #149ddd;
-}
-
-.sponsors .icon-box:hover .icon .euros {
-  color: #149ddd;
-}
-
-
 .sponsors .title {
   margin-left: 80px;
   font-weight: 700;
   margin-bottom: 15px;
   font-size: 18px;
-}
-
-.sponsors .title a {
   color: #343a40;
 }
 
-.sponsors .title a:hover {
-  color: #149ddd;
-}
 
 .sponsors .description {
   margin-left: 80px;
   line-height: 24px;
   font-size: 14px;
 }
+
+
+
 
 /*--------------------------------------------------------------
 # teams
