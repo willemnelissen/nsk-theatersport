@@ -107,7 +107,8 @@
 
       } else if (bedrag >= 15 && bedrag < 25) {
         $rewardBox.addClass("vriend-level-2")
-        $('#actual-icon').addClass('icofont-skull-danger')
+        $('#actual-icon').attr('hidden')
+        $('#vrienden-video').removeAttr('hidden')        
         $rewardTitle.html("Gif-vriend #BFF")
         firstConfetti = createConfetti(left,top,50,firstConfetti)
         secondConfetti = createConfetti(right,top,50,secondConfetti)  
