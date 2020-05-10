@@ -667,6 +667,13 @@ section {
   transition: 0.5s;
   border: 1px solid #149ddd;
 }
+
+.sponsors .video-circle {
+  border-radius: 50%;
+  object-fit: cover;
+  display: none;
+}
+
 /*
 .sponsors .red-icon {
   background: rgb(189, 9, 9);
@@ -717,6 +724,8 @@ section {
   animation: pulse 1.5s infinite;
 
 }
+
+
 /*
 .sponsors .vriend-level-4 #vrienden-form {
   transform: translate(100);
@@ -747,11 +756,6 @@ section {
 @keyframes twitch {
   0% {transform: translate(2px)};
   100% {transform: translate(-2px)};
-}
-
-.sponsors .video-circle {
-  border-radius: 50%;
-  object-fit: cover;
 }
 
 particle {
