@@ -88,6 +88,8 @@
       let right = Math.floor(offset.left + vriendenWidth)
       $rewardBox.removeClass(vriendenLevels)
       $('#actual-icon').removeClass()
+      $('#reward-info').find('.icon').css('display','flex')
+      $('#reward-info').find('video').css('display','none')
 
       if (bedrag < 5) {
         $rewardBox.addClass("vriend-level-0")

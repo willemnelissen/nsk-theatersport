@@ -713,8 +713,23 @@ section {
 }
 .sponsors .vriend-level-4 {
   background: rgb(255, 202, 104);
-  border-color: rgb(255, 202, 104);
+  background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+  background-size: 400% 400%;
+  border-color: rgba(255, 202, 104, 0);
   border-width: 10px;
+  animation: gradient 4s ease infinite;
+}
+
+@keyframes gradient {
+	0% {
+		background-position: 10% 50%;
+	}
+	50% {
+		background-position: 90% 50%;
+	}
+	100% {
+		background-position: 10% 50%;
+	}
 }
 
 .sponsors .vriend-level-5 {
