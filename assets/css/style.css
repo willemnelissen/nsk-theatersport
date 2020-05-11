@@ -670,6 +670,9 @@ section {
 
 .sponsors .video-circle {
   border-radius: 50%;
+  border-style: solid;
+  border-width: 2px;
+  border-color: black;
   object-fit: cover;
   display: none;
 }
@@ -714,12 +717,20 @@ section {
 .sponsors .vriend-level-4 {
   background: rgb(255, 202, 104);
   background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
-  background-size: 400% 400%;
+  background: radial-gradient(circle at center, black, black 50px, white 50px, white 100px, black 100px, black 150px);
+ /* background-size: 400% 400%;*/
   border-color: rgba(255, 202, 104, 0);
   border-width: 10px;
   animation: gradient 4s ease infinite;
+  transform-origin: center;
 }
 
+@keyframes gradient {
+  0% {background-size: 100%}
+  50% {background-size: 200%}
+  100% {background-size: 100%}
+}
+/*
 @keyframes gradient {
 	0% {
 		background-position: 10% 50%;
@@ -730,7 +741,7 @@ section {
 	100% {
 		background-position: 10% 50%;
 	}
-}
+}*/
 
 .sponsors .vriend-level-5 {
   background: hsl(0, 100%, 76%);
@@ -763,16 +774,6 @@ section {
 	}
 }
 
-.sponsors .vriend-level-5 #vrienden-form {
-  display: flex;
-  animation: twitch 0.1s infinite;
-}
-
-@keyframes twitch {
-  0% {transform: translate(2px)};
-  100% {transform: translate(-2px)};
-}
-
 particle {
   left: 0;
   pointer-events: none;
@@ -781,6 +782,7 @@ particle {
   opacity: 0;
   z-index: 10000;
 }
+
 .sponsors .icon i {
   color: #fff;
   font-size: 24px;

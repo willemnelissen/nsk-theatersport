@@ -88,7 +88,7 @@
       let right = Math.floor(offset.left + vriendenWidth)
       $rewardBox.removeClass(vriendenLevels)
       $('#actual-icon').removeClass()
-      $('#reward-info').find('.icon').css('display','flex')
+      $('#reward-info').find('#actual-icon').css('display','flex')
       $('#reward-info').find('video').css('display','none')
 
       if (bedrag < 5) {
@@ -109,8 +109,8 @@
 
       } else if (bedrag >= 15 && bedrag < 25) {
         $rewardBox.addClass("vriend-level-2")
-        $('#reward-info').find('.icon').css('display','none')
-        $('#reward-info').find('video').css('display','block')
+        $('#reward-info').find('#actual-icon').css('display','none')
+        $('#reward-info').find('video').css('display','flex')
         $('#vrienden-video').removeAttr('hidden')        
         $rewardTitle.html("Gif-vriend #BFF")
         firstConfetti = createConfetti(left,top,50,firstConfetti)
