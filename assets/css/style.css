@@ -670,10 +670,6 @@ section {
 
 .sponsors .video-circle {
   border-radius: 50%;
-  border-style: solid;
-  border-width: 2px;
-  border-color: black;
-  object-fit: cover;
   display: none;
 }
 
@@ -684,7 +680,7 @@ section {
 }
 */
 
-.sponsors #vrienden-rewards {
+.sponsors .vrienden-rewards {
   margin: 15px; 
   padding: 10px;
   border-radius: 3px;
@@ -692,10 +688,13 @@ section {
   transition: all 0.5s;
   box-shadow: 0px 0px 8px #999;
 }
+.sponsors .description {
+  min-height: 60px;
+}
 
 .sponsors .vriend-level-0 {
-  background: rgb(223, 218, 204);
-  border-color: rgb(223, 218, 204);
+  background: #e3ecea;
+  border-color: #e3ecea;
   border-width: 2px;
 }
 .sponsors .vriend-level-1 {
@@ -704,44 +703,28 @@ section {
   border-width: 4px;
 }
 .sponsors .vriend-level-2 {
-  background: rgb(189, 221, 75);
-  border-color: rgb(189, 221, 75);
+  background: hsl(113, 70%, 70%);
+  border-color: hsl(113,70%,70%);
   border-width: 6px;
 }
 .sponsors .vriend-level-3 {
-  background:#f6c101;
+  background: #f6c101;
+  border-color: #f6c101;
   border-width: 8px;
-  border-image: repeating-linear-gradient(to right, black 0%,black 33%, #FDDA24 33%, #FDDA24 66%, #EF3340 66%, #EF3340 100%) 8;
- /* border-image: linear-gradient(to right, grey 25%, yellow 25%, yellow 50%,red 50%, red 75%, teal 75%) 5;*/
 }
 .sponsors .vriend-level-4 {
-  background: rgb(255, 202, 104);
-  background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
-  background: radial-gradient(circle at center, black, black 50px, white 50px, white 100px, black 100px, black 150px);
- /* background-size: 400% 400%;*/
-  border-color: rgba(255, 202, 104, 0);
   border-width: 10px;
-  animation: gradient 4s ease infinite;
-  transform-origin: center;
+  border-color: rgba(255, 202, 140, 0);
+  background: linear-gradient(30deg, rgb(170,170,170) 30%, rgb(199, 199, 199) 40%, rgb(170,170,170) 50%);
+  background-size: 600% 100%;
+  animation: gradient 4s linear infinite;
+  animation-direction: alternate;
 }
 
 @keyframes gradient {
-  0% {background-size: 100%}
-  50% {background-size: 200%}
-  100% {background-size: 100%}
+  0% {background-position: 0%}
+  100% {background-position: 100%}
 }
-/*
-@keyframes gradient {
-	0% {
-		background-position: 10% 50%;
-	}
-	50% {
-		background-position: 90% 50%;
-	}
-	100% {
-		background-position: 10% 50%;
-	}
-}*/
 
 .sponsors .vriend-level-5 {
   background: hsl(0, 100%, 76%);
@@ -751,27 +734,12 @@ section {
 
 }
 
-
-/*
-.sponsors .vriend-level-4 #vrienden-form {
-  transform: translate(100);
-}
-*/
 @keyframes pulse {
-	0% {
-		transform: scale(1);
-		box-shadow: 0 0 0 0 rgba(255, 133, 133, 0.7);
-	}
-	
-	70% {
-		transform: scale(1);
-		box-shadow: 0 0 0 10px rgba(255, 133, 133, 0);
-	}
-	
-	100% {
-		transform: scale(1);
-		box-shadow: 0 0 0 0 rgba(255, 133, 133, 0);
-	}
+  0% {transform: scale(1);}
+  30% {transform: scale(1.01);}
+  50% {transform: scale(1);}
+	70% {transform: scale(1.01);}
+	100% {transform: scale(1);}
 }
 
 particle {

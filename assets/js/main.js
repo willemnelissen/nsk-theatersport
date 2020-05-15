@@ -86,6 +86,7 @@
       let left = Math.floor(offset.left)
       let top = Math.floor(offset.top)
       let right = Math.floor(offset.left + vriendenWidth)
+
       $rewardBox.removeClass(vriendenLevels)
       $('#actual-icon').removeClass()
       $('#reward-info').find('#actual-icon').css('display','flex')
@@ -123,7 +124,7 @@
         $rewardTitle.html("Drinkmaatje!")
         firstConfetti = createConfetti(left,top,30,firstConfetti)
         secondConfetti = createConfetti(right,top,30,secondConfetti)  
-        $(".description").html("Holapola! Jij bent zo'n goede vriend, dat we met jou wel eens iets willen gaan drinken! En wij trakteren! Je krijgt van ons een heus bierenpakket bij aankomst op het toernooi!")
+        $(".description").html("Holapola! Jij bent zo'n goede vriend, dat we met jou wel eens iets willen gaan drinken. En wij trakteren! Je krijgt bij aankomst op het toernooi een <strong>pakket Belgische bieren</strong> bij aankomst op het toernooi.")
 
       } else if (bedrag >= 35 && bedrag < 50) {
         $rewardBox.addClass("vriend-level-4")
