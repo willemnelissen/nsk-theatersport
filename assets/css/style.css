@@ -718,7 +718,7 @@ section {
   background: linear-gradient(30deg, rgb(170,170,170) 30%, rgb(199, 199, 199) 40%, rgb(170,170,170) 50%);
   background-size: 600% 100%;
   animation: gradient 4s linear infinite;
-  animation-direction: alternate;
+  animation-direction: reverse;
 }
 
 @keyframes gradient {
