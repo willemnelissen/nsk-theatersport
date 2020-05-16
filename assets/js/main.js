@@ -200,7 +200,7 @@
   dataType: "json",
   data: $form.serializeObject()
     }).success(
-      // do something
+      $("#vrienden-content").css('display: none')
   );
 })
 
