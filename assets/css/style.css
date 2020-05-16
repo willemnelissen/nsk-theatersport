@@ -524,13 +524,6 @@ section {
   display: none;
 }
 
-/*
-.sponsors .red-icon {
-  background: rgb(189, 9, 9);
-  border: none;
-}
-*/
-
 .sponsors .vrienden-rewards {
   margin: 15px; 
   padding: 10px;
@@ -620,6 +613,31 @@ particle {
   margin-left: 80px;
   line-height: 24px;
   font-size: 14px;
+}
+
+.sponsors .disappear {
+  opacity: 1;
+  animation: bye;
+	animation-duration: 1s;
+	animation-iteration-count: 1;
+	animation-timing-function: ease;
+  animation-fill-mode: forwards;
+}
+
+@keyframes bye {
+  70% {
+    opacity: 0.5;
+    transform: scale(1, 0.1);
+  }
+  90% {
+    opacity: 0.5;
+    transform: translateX(100%) scale(1,0.1);
+  }
+  100% {
+    opacity: 0;
+    transform: translateX(100%) scale(1,0.1);
+    display: none;
+  }
 }
 
 /*--------------------------------------------------------------
