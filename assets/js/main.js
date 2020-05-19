@@ -200,8 +200,10 @@
     dataType: "json",
     data: $form.serializeObject()
       }).success(
-        $("#vrienden-content").addClass("disappear")
+        alert('AJAX call was succesful')
+//        $("#vrienden-content").addClass("disappear")
       );
+    return false
   })
 
 
