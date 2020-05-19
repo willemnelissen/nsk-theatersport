@@ -198,6 +198,7 @@
     url: url,
     method: "GET",
     dataType: "json",
+    processData: false,
     data: $form.serializeObject()
       }).success(
         alert('AJAX call was succesful')
@@ -205,7 +206,6 @@
       );
     return false
   })
-
 
   // END OF CUSTOM JAVASCRIPT  
 
