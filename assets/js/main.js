@@ -192,17 +192,17 @@
   var $form = $('form#vrienden-form'),
   url = 'https://script.google.com/macros/s/AKfycbwAbxEO_Jlkbum4LyrC-BVMu-Y2UlYPcaevnHmx-D0dcawVBtI/exec'
 
-  $('#submit-form').on('click', function(e) {
-  e.preventDefault();
-  var jqxhr = $.ajax({
-  url: url,
-  method: "GET",
-  dataType: "json",
-  data: $form.serializeObject()
-    }).success(
-      $("#vrienden-content").addClass("disappear")
-  );
-})
+  $('#submit-form').on('submit', function(e) {
+    e.preventDefault();
+    var jqxhr = $.ajax({
+    url: url,
+    method: "GET",
+    dataType: "json",
+    data: $form.serializeObject()
+      }).success(
+        $("#vrienden-content").addClass("disappear")
+      );
+  })
 
 
   // END OF CUSTOM JAVASCRIPT  
