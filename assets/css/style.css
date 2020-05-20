@@ -622,6 +622,7 @@ particle {
 	animation-iteration-count: 1;
 	animation-timing-function: ease;
   animation-fill-mode: forwards;
+  transform-origin: top;
 }
 
 @keyframes bye {
@@ -636,8 +637,29 @@ particle {
   100% {
     opacity: 0;
     transform: translateX(100%) scale(1,0.1);
-    display: none;
+    height: 0;
+    background-color: #ed3c0d;
   }
+}
+
+.sponsors #vrienden-thanks {
+  display: none;
+  text-align: center;
+}
+
+.sponsors .appear {
+  display: block !important;
+  animation: hi;
+  animation-duration: 3s;
+  animation-iteration-count: 1;
+  animation-timing-function: ease;
+  animation-fill-mode: forwards;
+  opacity: 0;
+}
+
+@keyframes hi {
+  50% {opacity: 0;}
+  100% {opacity: 1;}
 }
 
 /*--------------------------------------------------------------

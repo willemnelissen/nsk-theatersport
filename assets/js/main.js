@@ -18,7 +18,7 @@
 
   // Confetti!
   var allConfetties = [];
-  function destroyConfetty(allConfetties) {
+  function destroyConfetti(allConfetties) {
     allConfetties.forEach( (id)=>window.clearInterval(id))
   }
   function createConfetti(x,y,interval,confetti=0){
@@ -216,15 +216,18 @@
 
     // Callback handler that will be called on success
     request.done(function(response, textStatus, jqXHR){
-      console.log("Hooray, it worked!")
+      console.log("Hooray, it worked!");
+      $('#vrienden-content').addClass('disappear');
+      destroyConfetti(allConfetties);
+      $("#vrienden-thanks").addClass('appear');
     });
+    
     // Callback handler that will be called on failure
     request.fail(function(jqXHR, textStatus, errorThrown){
-      console.error(
-        "The following error occured: "+
-        textStatus, errorThrown
-      );
+      console.error("The following error occured: "+
+        textStatus, errorThrown);
     });
+
     // Callback handler that will be called always
     request.always(function () {
       // Re-enable the inputs
