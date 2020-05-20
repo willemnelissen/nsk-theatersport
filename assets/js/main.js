@@ -188,33 +188,50 @@
   });
 */
   // Formulier bij Vrienden
-  
-  var $form = $('form#vrienden-form'),
-  url = 'https://script.google.com/macros/s/AKfycbwAbxEO_Jlkbum4LyrC-BVMu-Y2UlYPcaevnHmx-D0dcawVBtI/exec'
 
-  $('#submit-form').on('submit', function(e) {
-    e.preventDefault();
-    console.log('Hallo?')
-    var jqxhr = $.ajax({
-    url: url,
-    method: "GET",
-    dataType: "json",
-    processData: false,
-    data: $form.serializeObject()
-      })
-      .success(function() {
-        alert('AJAX call was succesful');
-        $("#vrienden-content").addClass("disappear");
-        console.log("successed")
-      })
-      .fail(function() {
-        alert( "error" );
-        console.log("failed")
-      })
-      .always(function() {
-        console.log("Should always run")
-      })
-  })
+  var request;
+
+  $("#vrienden-form").submit(function(event) {
+    // Prevent default posting of form
+    event.preventDefault();
+    // Abort any pending request
+    if (request) {
+      request.abort();
+    }
+    // Local variable to access the form
+    var $form = $(this);
+    // Select and cache all fields, we need them later
+    var $inputs = $form.find("input, select, button, textarea");
+    // Serialize the data in the form
+    var serializedData = $form.serialize();
+    // Disable the inputs for the duration of the Ajax request
+    $inputs.prop("disabled",true);
+
+    // Fire off the request!
+    request = $.ajax({
+      url: 'https://script.google.com/macros/s/AKfycbzCaJzbtG56oi36pWkeLQV2SE7breDYt-Yl92uFzI3VqUoPVp0/exec',
+      type: 'post',
+      data: serializedData
+    });
+
+    // Callback handler that will be called on success
+    request.done(function(response, textStatus, jqXHR){
+      console.log("Hooray, it worked!")
+    });
+    // Callback handler that will be called on failure
+    request.fail(function(jqXHR, textStatus, errorThrown){
+      console.error(
+        "The following error occured: "+
+        textStatus, errorThrown
+      );
+    });
+    // Callback handler that will be called always
+    request.always(function () {
+      // Re-enable the inputs
+      $inputs.prop("disabled",false);
+      console.error("Hallo?")
+    });
+  });
 
   // END OF CUSTOM JAVASCRIPT  
 
