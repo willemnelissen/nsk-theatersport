@@ -618,7 +618,7 @@ particle {
 .sponsors .disappear {
   opacity: 1;
   animation: bye;
-	animation-duration: 1s;
+	animation-duration: 4s;
 	animation-iteration-count: 1;
 	animation-timing-function: ease;
   animation-fill-mode: forwards;

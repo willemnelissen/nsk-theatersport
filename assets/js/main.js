@@ -163,7 +163,7 @@
     var serializedData = $form.serialize();
     // Disable the inputs for the duration of the Ajax request
     $inputs.prop("disabled",true);
-
+    
     // Fire off the request!
     request = $.ajax({
       url: 'https://script.google.com/macros/s/AKfycbzCaJzbtG56oi36pWkeLQV2SE7breDYt-Yl92uFzI3VqUoPVp0/exec',
