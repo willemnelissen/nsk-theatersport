@@ -194,6 +194,7 @@
 
   $('#submit-form').on('submit', function(e) {
     e.preventDefault();
+    console.log('Hallo?')
     var jqxhr = $.ajax({
     url: url,
     method: "GET",
@@ -209,6 +210,9 @@
       .fail(function() {
         alert( "error" );
         console.log("failed")
+      })
+      .always(function() {
+        console.log("Should always run")
       })
   })
 
