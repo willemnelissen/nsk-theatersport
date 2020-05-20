@@ -630,15 +630,13 @@ particle {
     opacity: 0.5;
     transform: scale(1, 0.1);
   }
-  90% {
-    opacity: 0.5;
+  99% {
+    opacity: 0;
     transform: translateX(100%) scale(1,0.1);
   }
   100% {
     opacity: 0;
-    transform: translateX(100%) scale(1,0.1);
     height: 0;
-    background-color: #ed3c0d;
   }
 }
 

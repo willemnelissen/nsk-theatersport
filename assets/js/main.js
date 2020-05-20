@@ -145,52 +145,9 @@
     });
   });
 
-  /*
-  $(document).ready(function() {
-    const $valueSpan = $('.valueSpan');
-    const $value = $('#vrienden-range');
-    $valueSpan.html($value.val());
-    $value.on('input', () => {
-  
-      $valueSpan.html($value.val());
-      if ($value.val() < 5) {
-        $(".rewardsText1").hide();
-        $(".rewardsText2").hide();
-        $(".rewardsText3").hide();
-        $(".rewardsText4").hide();
-      } 
-      if ($value.val() >= 5) {
-        $(".rewardsText1").show();
-        $(".rewardsText2").hide();
-        $(".rewardsText3").hide();
-        $(".rewardsText4").hide();
-      } 
-      if ($value.val() >= 15) {
-        $(".rewardsText1").show();
-        $(".rewardsText2").show();
-        $(".rewardsText3").hide();
-        $(".rewardsText4").hide();
-      } 
-      if ($value.val() >= 25) {
-        $(".rewardsText1").show();
-        $(".rewardsText2").show();
-        $(".rewardsText3").show();
-        $(".rewardsText4").hide();
-      }
-      if ($value.val() >= 35) {
-        $(".rewardsText1").show();
-        $(".rewardsText2").show();
-        $(".rewardsText3").show();
-        $(".rewardsText4").show();
-      }
-
-    });
-  });
-*/
   // Formulier bij Vrienden
 
   var request;
-
   $("#vrienden-form").submit(function(event) {
     // Prevent default posting of form
     event.preventDefault();
@@ -216,7 +173,6 @@
 
     // Callback handler that will be called on success
     request.done(function(response, textStatus, jqXHR){
-      console.log("Hooray, it worked!");
       $('#vrienden-content').addClass('disappear');
       destroyConfetti(allConfetties);
       $("#vrienden-thanks").addClass('appear');
@@ -224,6 +180,7 @@
     
     // Callback handler that will be called on failure
     request.fail(function(jqXHR, textStatus, errorThrown){
+      alert("Something went wrong while processing your request, please contact us at nsk@preparee.be")
       console.error("The following error occured: "+
         textStatus, errorThrown);
     });
@@ -232,7 +189,6 @@
     request.always(function () {
       // Re-enable the inputs
       $inputs.prop("disabled",false);
-      console.error("Hallo?")
     });
   });
 
