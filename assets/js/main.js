@@ -203,7 +203,8 @@
       }).success(
         alert('AJAX call was succesful')
 //        $("#vrienden-content").addClass("disappear")
-      );
+      )
+      .done(alert('done!'));
     return false
   })
 
