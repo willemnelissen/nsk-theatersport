@@ -200,14 +200,16 @@
     dataType: "json",
     processData: false,
     data: $form.serializeObject()
-      }).success(
-        alert('AJAX call was succesful')
-//        $("#vrienden-content").addClass("disappear")
-      )
+      })
+      .success(function() {
+        alert('AJAX call was succesful');
+        $("#vrienden-content").addClass("disappear");
+        console.log("successed")
+      })
       .fail(function() {
         alert( "error" );
+        console.log("failed")
       })
-    return false
   })
 
   // END OF CUSTOM JAVASCRIPT  
