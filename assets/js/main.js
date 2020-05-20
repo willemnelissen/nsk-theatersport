@@ -204,7 +204,9 @@
         alert('AJAX call was succesful')
 //        $("#vrienden-content").addClass("disappear")
       )
-      .done(alert('done!'));
+      .fail(function() {
+        alert( "error" );
+      })
     return false
   })
 
