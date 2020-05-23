@@ -327,7 +327,7 @@
     });
   });
 
-  // Teams carousel (uses the Owl Carousel library)
+  //  carousel (uses the Owl Carousel library)
   $(".teams-carousel").owlCarousel({
     autoplay: true,
     dots: true,
