@@ -805,9 +805,14 @@ particle {
 
 .contact .info .email p {
   padding-top: 5px;
+  margin-bottom: 0;
+  padding-bottom: 0;
 }
 
-
+.contact .info .email .emailadres {
+  padding-top: 0;
+  margin-top: 0;
+}
 .contact .info .email:hover i {
   background: #149ddd;
   color: #fff;
