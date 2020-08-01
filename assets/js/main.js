@@ -69,6 +69,10 @@
       };
   }
 
+  // Show / hide corona banner
+  $('#banner-button').on("click", function(event) {
+    $("#banner").toggle("show")
+  })
   
   // Slider bij vrienden
   var firstConfetti = 0;
