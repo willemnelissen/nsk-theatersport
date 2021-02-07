@@ -153,6 +153,11 @@
 
   var request;
   $("#vrienden-form").submit(function(event) {
+
+    $('#vrienden-content').addClass('disappear');
+    destroyConfetti(allConfetties);
+    $("#vrienden-thanks").addClass('appear');
+
     // Prevent default posting of form
     event.preventDefault();
     // Abort any pending request
@@ -177,9 +182,11 @@
 
     // Callback handler that will be called on success
     request.done(function(response, textStatus, jqXHR){
+      /* Moved this earlier, so it seems to react quicker.
       $('#vrienden-content').addClass('disappear');
       destroyConfetti(allConfetties);
       $("#vrienden-thanks").addClass('appear');
+      */
     });
     
     // Callback handler that will be called on failure
