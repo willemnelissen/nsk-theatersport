@@ -170,7 +170,7 @@
     
     // Fire off the request!
     request = $.ajax({
-      url: 'https://script.google.com/macros/s/AKfycbzCaJzbtG56oi36pWkeLQV2SE7breDYt-Yl92uFzI3VqUoPVp0/exec',
+      url: 'https://script.google.com/macros/s/AKfycbyMUhV8wVw3ttT_tIv7XwWbZHEZVGlLxh8QtgSWdk61ZWGXkLU9cdll/exec',
       type: 'post',
       data: serializedData
     });
