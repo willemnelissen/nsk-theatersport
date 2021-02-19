@@ -136,7 +136,7 @@
         $rewardTitle.html("Matching outfits! #merch")
         firstConfetti = createConfetti(left,top,10,firstConfetti)
         secondConfetti = createConfetti(right,top,10,secondConfetti)  
-        $(".description").html("Op mensen als jou steunt het NSK. en we vinden dat iedereen dat mag weten. Van ons krijg je een echte <strong>single edition NSK 2020 t-shirt</strong>!")
+        $(".description").html("Op mensen als jou steunt het NSK, en we vinden dat iedereen dat mag weten. Van ons krijg je een echte <strong>single edition NSK 2020 t-shirt</strong>!")
 
       } else if (bedrag >= 50) {
         $rewardBox.addClass("vriend-level-5")
