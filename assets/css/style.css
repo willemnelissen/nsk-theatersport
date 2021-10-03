@@ -322,7 +322,7 @@ section {
 }
 
 .section-bg {
-  background: #f5f8fd;
+  background: var(--secondary-lighter);
 }
 
 .section-title {
@@ -837,7 +837,7 @@ particle {
   padding: 0 0 10px 60px;
   margin-bottom: 20px;
   font-size: 14px;
-  color: var(--primary-dark);
+  color: var(--primary);
 }
 
 .contact .info .email p {
