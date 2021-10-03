@@ -231,6 +231,10 @@ h1, h2, h3, h4, h5, h6 {
     background-size: cover;
 }
 
+#hero .btn-lg {
+    font-size: 1.4em;
+}
+
 .hero-logo-container {
     text-align: center;
     margin-bottom: 2rem;
@@ -625,6 +629,7 @@ section {
 # Sponsors
 --------------------------------------------------------------*/
 
+
 .sponsors input[type="submit"] {
     background: var(--primary);
     border: 0;
@@ -645,11 +650,11 @@ section {
 }
 
 .sponsors #vrienden-value {
-    color: var(--secondary);
+    color: var(--primary);
 }
 
 .sponsors #vrienden-range::-webkit-slider-thumb {
-    background: var(--secondary);
+    background: var(--primary);
 }
 
 .sponsors #reward-info h4 {
@@ -675,8 +680,8 @@ section {
 }
 
 .sponsors .vrienden-rewards {
-    margin: 15px;
-    padding: 10px;
+    margin: 1rem auto;
+    padding: 1rem;
     border-radius: 3px;
     border-style: solid;
     transition: all 0.5s;
