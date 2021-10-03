@@ -13,11 +13,12 @@ body {
 }
 
 a {
-  color: #149ddd;
+  color: var(--primary);
+  font-weight: bold;
 }
 
 a:hover {
-  color: #37b3ed;
+  color: var(--primary-dark);
   text-decoration: none;
 }
 
@@ -49,7 +50,7 @@ h1, h2, h3, h4, h5, h6 {
   border-radius: 50px;
   right: 15px;
   bottom: 15px;
-  background: #149ddd;
+  background: var(--secondary);
   color: #fff;
   transition: display 0.5s ease-in-out;
   z-index: 99999;
@@ -64,7 +65,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .back-to-top:hover {
   color: #fff;
-  background: #2eafec;
+  background: var(--primary);
   transition: background 0.2s ease-in-out;
 }
 
@@ -81,7 +82,7 @@ h1, h2, h3, h4, h5, h6 {
   z-index: 9999;
   transition: all 0.5s;
   padding: 0 15px;
-  background: #040b14;
+  background: var(--black);
   overflow-y: auto;
 }
 
@@ -110,23 +111,23 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 #header .profile .social-links a {
-  font-size: 18px;
+  font-size: 1.3em;
   display: inline-block;
-  background: #212431;
+  background: var(--gray-dark);
   color: #fff;
   line-height: 1;
-  padding: 8px 0;
-  margin-right: 4px;
+  padding: .5em 0;
+  margin-right: .25em;
   border-radius: 50%;
   text-align: center;
-  width: 36px;
-  height: 36px;
+  width: 2em;
+  height: 2em;
   transition: 0.3s;
 }
 
 #header .profile .social-links a:hover {
-  background: #149ddd;
-  color: #fff;
+  background: var(--secondary);
+  color: var(--primary);
   text-decoration: none;
 }
 
@@ -165,7 +166,7 @@ h1, h2, h3, h4, h5, h6 {
 .nav-menu a {
   display: flex;
   align-items: center;
-  color: #a8a9b4;
+  color: var(--gray);
   padding: 12px 15px;
   margin-bottom: 8px;
   transition: 0.3s;
@@ -175,7 +176,7 @@ h1, h2, h3, h4, h5, h6 {
 .nav-menu a i {
   font-size: 24px;
   padding-right: 8px;
-  color: #6f7180;
+  color: var(--gray);
 }
 
 .nav-menu a:hover, .nav-menu .active > a, .nav-menu li:hover > a {
@@ -184,7 +185,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .nav-menu a:hover i, .nav-menu .active > a i, .nav-menu li:hover > a i {
-  color: #149ddd;
+  color: var(--secondary);
 }
 
 /* Mobile Navigation */
@@ -204,7 +205,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .mobile-nav-toggle i {
-  color: #149ddd;
+  color: var(--secondary);
 }
 
 .mobile-nav-active {
@@ -265,7 +266,7 @@ h1, h2, h3, h4, h5, h6 {
   color: #fff;
   padding-bottom: 4px;
   letter-spacing: 1px;
-  border-bottom: 3px solid #149ddd;
+  border-bottom: 3px solid var(--secondary);
 }
 
 #hero label {
@@ -274,7 +275,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 #hero input[type="submit"] {
-  background: #149ddd;
+  background: var(--secondary);
   border: 0;
 /*  padding: 10px 24px;*/
   color: #fff;
@@ -285,7 +286,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 #hero input[type="submit"]:hover {
-  background: #173b6c;
+  background: var(--primary-dark);
 }
 
 @media (min-width: 1024px) {
@@ -334,7 +335,7 @@ section {
   margin-bottom: 20px;
   padding-bottom: 20px;
   position: relative;
-  color: #173b6c;
+  color: var(--primary-dark);
 }
 
 .section-title h2::after {
@@ -343,7 +344,7 @@ section {
   display: block;
   width: 50px;
   height: 3px;
-  background: #149ddd;
+  background: var(--secondary);
   bottom: 0;
   left: 0;
 }
@@ -380,7 +381,7 @@ section {
 .about .content h3 {
   font-weight: 700;
   font-size: 26px;
-  color: #173b6c;
+  color: var(--primary-dark);
 }
 
 .about .content ul {
@@ -395,7 +396,7 @@ section {
 .about .content ul i {
   font-size: 20px;
   padding-right: 2px;
-  color: #149ddd;
+  color: var(--secondary);
 }
 
 .about .content p:last-child {
@@ -437,7 +438,7 @@ section {
 }
 
 .teams .team-item .quote-icon-left, .teams .team-item .quote-icon-right {
-  color: #c3e8fa;
+  color: var(--secondary-light);
   font-size: 26px;
 }
 
@@ -492,7 +493,7 @@ section {
 }
 
 .teams .owl-dot.active {
-  background-color: #149ddd !important;
+  background-color: var(--secondary) !important;
 }
 
 @media (max-width: 767px) {
@@ -538,7 +539,7 @@ section {
 }
 
 .portfolio #portfolio-flters li:hover, .portfolio #portfolio-flters li.filter-active {
-  color: #149ddd;
+  color: var(--primary);
 }
 
 .portfolio #portfolio-flters li:last-child {
@@ -591,7 +592,7 @@ section {
 }
 
 .portfolio .portfolio-wrap .portfolio-links a + a {
-  border-left: 1px solid #37b3ed;
+  border-left: 1px solid var(--primary);
 }
 
 .portfolio .portfolio-wrap:hover::before {
@@ -612,7 +613,7 @@ section {
 --------------------------------------------------------------*/
 
 .sponsors input[type="submit"] {
-  background: #149ddd;
+  background: var(--primary);
   border: 0;
 /*  padding: 10px 24px;*/
   color: #fff;
@@ -623,7 +624,7 @@ section {
 }
 
 .sponsors input[type="submit"]:hover {
-  background: #173b6c;
+  background: var(--primary-dark);
 }
 
 .sponsors .custom-range {
@@ -631,11 +632,11 @@ section {
 }
 
 .sponsors #vrienden-value {
-  color: #149ddd;
+  color: var(--secondary);
 }
 
 .sponsors #vrienden-range::-webkit-slider-thumb {
-  background: #149ddd;
+  background: var(--secondary);
 }
 
 .sponsors #reward-info h4 {
@@ -649,10 +650,10 @@ section {
   justify-content: center;
   width: 54px;
   height: 54px;
-  background: #149ddd;
+  background: var(--secondary);
   border-radius: 50%;
   transition: 0.5s;
-  border: 1px solid #149ddd;
+  border: 1px solid var(--secondary);
 }
 
 .sponsors .video-circle {
@@ -678,8 +679,8 @@ section {
   border-width: 2px;
 }
 .sponsors .vriend-level-1 {
-  background: #b4f0e3;
-  border-color: #b4f0e3;
+  background: var(--secondary-light);
+  border-color: var(--secondary-light);
   border-width: 4px;
 }
 .sponsors .vriend-level-2 {
@@ -812,11 +813,11 @@ particle {
 
 .contact .info i {
   font-size: 20px;
-  color: #149ddd;
+  color: var(--secondary);
   float: left;
   width: 44px;
   height: 44px;
-  background: #dff3fc;
+  background: var(--gray-dark);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -836,7 +837,7 @@ particle {
   padding: 0 0 10px 60px;
   margin-bottom: 20px;
   font-size: 14px;
-  color: #173b6c;
+  color: var(--primary-dark);
 }
 
 .contact .info .email p {
@@ -850,12 +851,12 @@ particle {
   margin-top: 0;
 }
 .contact .info .email:hover i {
-  background: #149ddd;
-  color: #fff;
+  background: var(--secondary);
+  color: var(--primary);
 }
 /*
 .contact .info .address:hover i, .contact .info .phone:hover i {
-  background: #149ddd;
+  background: var(--secondary);
   color: #fff;
 }
 */
@@ -891,7 +892,7 @@ particle {
 }
 
 .portfolio-details .portfolio-details-carousel .owl-dot.active {
-  background-color: #149ddd !important;
+  background-color: var(--secondary) !important;
 }
 
 .portfolio-details .portfolio-info {
