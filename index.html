@@ -323,41 +323,52 @@
 
         <div id="vrienden-content">
             <div class="row" data-aos="fade-right">
-                <div class="col-8 offset-2">
+                <div class="col-12 col-md-8 offset-md-2">
                     <input type="range" class="custom-range" id="vrienden-range" min="1" max="75" value="12"
                            form="vrienden-form" name="bedrag" required>
                 </div>
-                <div class="col-12 text-center">
+                <div class="col-12 col-md-8 offset-md-2 text-center">
                     Je geeft <span class="font-weight-bold" id="vrienden-value">€ 12!</span>
                 </div>
             </div>
 
             <div class="row">
-                <div class="col-8 offset-2 vrienden-rewards vriend-level-1" id="vrienden-rewards">
-                    <div id="reward-info">
-                        <div class="icon"><i id="actual-icon" class="icofont-medal"></i>
-                            <video width="60" height="60" id="vrienden-video" class="video-circle" muted autoplay loop
-                                   preload="auto">
-                                <source src="./assets/video/willem-duim.mp4" type="video/mp4">
-                                Your browser does not support videos!
-                            </video>
+                <div class="col-12 col-md-8 offset-md-2">
+                    <div class="vrienden-rewards vriend-level-1" id="vrienden-rewards">
+                        <div id="reward-info">
+                            <div class="icon"><i id="actual-icon" class="icofont-medal"></i>
+                                <video width="60" height="60" id="vrienden-video" class="video-circle" muted autoplay
+                                       loop
+                                       preload="auto">
+                                    <source src="./assets/video/willem-duim.mp4" type="video/mp4">
+                                    Your browser does not support videos!
+                                </video>
+                            </div>
+
+                            <h4 class="title">Vriend worden?</h4>
+                            <p class="description">Schuif met de slider om te weten te komen wat je allemaal krijgt als
+                                Vriend van het NSK!</p>
                         </div>
 
-                        <h4 class="title">Vriend worden?</h4>
-                        <p class="description">Schuif met de slider om te weten te komen wat je allemaal krijgt als
-                            Vriend van het NSK!</p>
+                        <form id="vrienden-form">
+                            <div class="form-row align-items-center input-group">
+
+                                <div class="col-12 col-md-6">
+                                    <input id="vrienden-email" class="form-control" type="email" name="email"
+                                           placeholder="E-mailadres" required/>
+                                </div>
+                                <div class="col-12 col-md-6">
+                                    <input type="submit" id="submit-form" class="btn btn-primary btn-block btn-submit"
+                                           value="Ik wil vriend worden!">
+                                </div>
+                            </div>
+                            <!--                            <div class="input-group">-->
+                            <!--                                <div class="input-group-append">-->
+                            <!--                                </div>-->
+                            <!--                            </div>-->
+                        </form>
                     </div>
 
-                    <form id="vrienden-form">
-                        <div class="input-group">
-                            <input id="vrienden-email" class="form-control" type="email" name="email"
-                                   placeholder="E-mailadres" required/>
-                            <div class="input-group-append">
-                                <input type="submit" id="submit-form" class="btn btn-primary btn-submit"
-                                       value="Ik wil vriend worden!">
-                            </div>
-                        </div>
-                    </form>
                 </div>
             </div>
         </div>
