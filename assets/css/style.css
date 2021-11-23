@@ -425,9 +425,10 @@ section {
 --------------------------------------------------------------*/
 
 .score-frame {
-    width: 100%;
-    height: 28em;
+    width: 29.8em;
+    height: 23em;
     border: 3px solid var(--secondary) ;
+    overflow:  hidden;
 }
 
 /*--------------------------------------------------------------
