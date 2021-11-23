@@ -425,8 +425,8 @@ section {
 --------------------------------------------------------------*/
 
 .score-frame {
-    width: 29.8em;
-    height: 23em;
+    width: 32.6em;
+    height: 21.4em;
     border: 3px solid var(--secondary) ;
     overflow:  hidden;
 }
